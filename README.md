@@ -47,7 +47,7 @@ Uygulama, kullanıcılara akıcı bir başlangıç deneyimi sunan bir onboarding
 
 1. Projeyi klonlayın:
 ```bash
-git clone https://github.com/kullaniciadi/baseapp.git
+git clone https://github.com/dodoizgi/plantapp.git
 ```
 
 2. Android Studio'da projeyi açın
