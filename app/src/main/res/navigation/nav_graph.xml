@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/onboardingFragment">
+
+    <fragment
+        android:id="@+id/onboardingFragment"
+        android:name="com.example.baseapp.ui.onboarding.OnboardingFragment"
+        android:label="OnboardingFragment">
+        <action
+            android:id="@+id/action_onboardingFragment_to_paywallFragment"
+            app:destination="@id/paywallFragment"
+            app:popUpTo="@id/onboardingFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_onboardingFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/paywallFragment"
+        android:name="com.example.baseapp.ui.paywall.PaywallFragment"
+        android:label="PaywallFragment">
+        <action
+            android:id="@+id/action_paywallFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/paywallFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.baseapp.ui.home.HomeFragment"
+        android:label="HomeFragment">
+        <action
+            android:id="@+id/action_homeFragment_to_searchFragment"
+            app:destination="@id/searchFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_myGardenFragment"
+            app:destination="@id/myGardenFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_diagnoseFragment"
+            app:destination="@id/diagnoseFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.example.baseapp.ui.search.SearchFragment"
+        android:label="SearchFragment" />
+
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.baseapp.ui.profile.ProfileFragment"
+        android:label="ProfileFragment" />
+
+    <fragment
+        android:id="@+id/myGardenFragment"
+        android:name="com.example.baseapp.ui.mygarden.MyGardenFragment"
+        android:label="MyGardenFragment" />
+
+    <fragment
+        android:id="@+id/diagnoseFragment"
+        android:name="com.example.baseapp.ui.diagnose.DiagnoseFragment"
+        android:label="DiagnoseFragment" />
+
+</navigation> 

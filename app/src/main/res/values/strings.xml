@@ -1,3 +1,35 @@
 <resources>
-    <string name="app_name">PlantApp</string>
+    <string name="app_name">BaseApp</string>
+    <string name="terms_privacy_text"><![CDATA[By tapping next, you are agreeing to PlantID Terms of Use & Privacy Policy.]]></string>
+    <string name="continue_text">Continue</string>
+    <string name="title">Title</string>
+    <string name="description">Description</string>
+    <string name="try_button_text">Try free for 3 days</string>
+    <string name="one_year_text">1 Year\nFirst 3 days free, then $29.99/year</string>
+    <string name="one_month_text">1 Month\n$2.99/month, auto renewable</string>
+    <string name="one_month_button_text">$2.99</string>
+    <string name="access_all_features">Access All Features</string>
+    <string name="plant_app_premium"><b>PlantApp</b> Premium</string>
+    <string name="unlimited_te">Unlimited</string>
+    <string name="unlimited">Unlimited\nPlant Identify</string>
+    <string name="faster">Faster\nProcess</string>
+    <string name="paywall_3_day_text">After the 3-day free trial period you’ll be charged ₺274.99 per year unless you cancel before the trial expires. Yearly Subscription is Auto-Renewable</string>
+    <string name="terms_privacy_restore">Terms • Privacy • Restore</string>
+    <string name="faster_text">Faster</string>
+    <string name="process">Process</string>
+    <string name="plant_identify">Plant Identify</string>
+    <string name="detailed">Detailed</string>
+    <string name="save_50">Save 50%</string>
+    <string name="first_3_days_free">First 3 days free, then $29.99/year</string>
+    <string name="one_month">1 Month</string>
+    <string name="month_auto_renewable">$2.99/month, auto renewable</string>
+    <string name="free_premium_available">FREE Premium Available</string>
+    <string name="tap_to_upgrade_your_account">Tap to upgrade your account!</string>
+    <string name="category_name">Category Name</string>
+    <string name="search_for_plants">Search for plants</string>
+    <string name="hi_plant_text">Hi, plant lover!\n<b>Good Afternoon!</b>️</string>
+    <string name="diagnose">Diagnose</string>
+    <string name="home">Home</string>
+    <string name="my_garden">My Garden</string>
+    <string name="profile">Profile</string>
 </resources>
