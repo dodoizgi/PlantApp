@@ -8,17 +8,19 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
-import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
+import com.example.plantapp.FragmentNavigationListener
 import com.example.plantapp.databinding.FragmentSearchBinding
 import com.example.plantapp.ui.base.BaseFragment
 import com.example.plantapp.ui.home.CategoriesAdapter
+import com.example.plantapp.ui.home.HomeFragment
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
 
 @AndroidEntryPoint
 class SearchFragment : BaseFragment<FragmentSearchBinding>() {
+    private lateinit var navigationListener: FragmentNavigationListener
 
     private val viewModel: SearchViewModel by viewModels()
     private lateinit var categoriesAdapter: CategoriesAdapter
@@ -32,7 +34,7 @@ class SearchFragment : BaseFragment<FragmentSearchBinding>() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
+        navigationListener = requireActivity() as FragmentNavigationListener
         initView()
     }
 
@@ -62,7 +64,7 @@ class SearchFragment : BaseFragment<FragmentSearchBinding>() {
         })
 
         closeButton.setOnClickListener {
-            findNavController().navigateUp()
+            navigationListener.loadFragment(HomeFragment())
         }
     }
 } 
