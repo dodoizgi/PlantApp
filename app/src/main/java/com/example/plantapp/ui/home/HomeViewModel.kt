@@ -1,15 +1,14 @@
-package com.example.baseapp.ui.home
+package com.example.plantapp.ui.home
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.asLiveData
 import androidx.lifecycle.viewModelScope
-import com.example.baseapp.data.model.Category
-import com.example.baseapp.data.model.Question
-import com.example.baseapp.data.repository.Repository
-import com.example.baseapp.domain.usecase.GetCategoriesUseCase
-import com.example.baseapp.domain.usecase.GetQuestionsUseCase
+import com.example.plantapp.data.model.Category
+import com.example.plantapp.data.model.Question
+import com.example.plantapp.data.repository.Repository
+import com.example.plantapp.domain.usecase.GetQuestionsUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
 import javax.inject.Inject

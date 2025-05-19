@@ -1,6 +1,6 @@
-package com.example.baseapp.di
+package com.example.plantapp.di
 
-import com.example.baseapp.data.api.ApiService
+import com.example.plantapp.data.api.ApiService
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

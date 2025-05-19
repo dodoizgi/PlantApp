@@ -1,4 +1,4 @@
-package com.example.baseapp.ui.home
+package com.example.plantapp.ui.home
 
 import android.content.Intent
 import android.net.Uri
@@ -9,10 +9,10 @@ import android.view.ViewGroup
 import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.baseapp.FragmentNavigationListener
-import com.example.baseapp.databinding.FragmentHomeBinding
-import com.example.baseapp.ui.base.BaseFragment
-import com.example.baseapp.ui.search.SearchFragment
+import com.example.plantapp.FragmentNavigationListener
+import com.example.plantapp.databinding.FragmentHomeBinding
+import com.example.plantapp.ui.base.BaseFragment
+import com.example.plantapp.ui.search.SearchFragment
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint

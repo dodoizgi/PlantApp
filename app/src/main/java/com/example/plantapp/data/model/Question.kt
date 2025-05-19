@@ -1,4 +1,4 @@
-package com.example.baseapp.data.model
+package com.example.plantapp.data.model
 
 data class Question(
     val id: Int,

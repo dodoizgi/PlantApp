@@ -1,7 +1,7 @@
-package com.example.baseapp.data.api
+package com.example.plantapp.data.api
 
-import com.example.baseapp.data.model.CategoryResponse
-import com.example.baseapp.data.model.Question
+import com.example.plantapp.data.model.CategoryResponse
+import com.example.plantapp.data.model.Question
 import retrofit2.http.GET
 
 interface ApiService {

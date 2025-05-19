@@ -1,7 +1,7 @@
-package com.example.baseapp.domain.usecase
+package com.example.plantapp.domain.usecase
 
-import com.example.baseapp.data.model.Category
-import com.example.baseapp.data.repository.Repository
+import com.example.plantapp.data.model.Category
+import com.example.plantapp.data.repository.Repository
 import javax.inject.Inject
 
 class GetCategoriesUseCase @Inject constructor(

@@ -1,4 +1,4 @@
-package com.example.baseapp.ui.home
+package com.example.plantapp.ui.home
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -6,9 +6,9 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.example.baseapp.R
-import com.example.baseapp.data.model.Category
-import com.example.baseapp.databinding.ItemCategoryBinding
+import com.example.plantapp.R
+import com.example.plantapp.data.model.Category
+import com.example.plantapp.databinding.ItemCategoryBinding
 
 class CategoriesAdapter : ListAdapter<Category, CategoriesAdapter.CategoryViewHolder>(CategoryDiffCallback()) {
 

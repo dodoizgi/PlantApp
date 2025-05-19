@@ -1,4 +1,4 @@
-package com.example.baseapp.ui.paywall
+package com.example.plantapp.ui.paywall
 
 import android.content.Context
 import android.content.SharedPreferences
@@ -10,10 +10,10 @@ import android.view.View.VISIBLE
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
-import com.example.baseapp.R
-import com.example.baseapp.databinding.FragmentPaywallBinding
+import com.example.plantapp.R
+import com.example.plantapp.databinding.FragmentPaywallBinding
 import dagger.hilt.android.AndroidEntryPoint
-import com.example.baseapp.ui.base.BaseFragment
+import com.example.plantapp.ui.base.BaseFragment
 
 @AndroidEntryPoint
 class PaywallFragment : BaseFragment<FragmentPaywallBinding>() {

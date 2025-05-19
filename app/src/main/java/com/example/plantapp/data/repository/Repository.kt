@@ -1,10 +1,10 @@
-package com.example.baseapp.data.repository
+package com.example.plantapp.data.repository
 
-import com.example.baseapp.data.api.ApiService
-import com.example.baseapp.data.local.CategoryDao
-import com.example.baseapp.data.local.CategoryEntity
-import com.example.baseapp.data.model.Category
-import com.example.baseapp.data.model.Question
+import com.example.plantapp.data.api.ApiService
+import com.example.plantapp.data.local.CategoryDao
+import com.example.plantapp.data.local.CategoryEntity
+import com.example.plantapp.data.model.Category
+import com.example.plantapp.data.model.Question
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.flow.map
@@ -47,7 +47,7 @@ class Repository @Inject constructor(
     }
 
     private fun CategoryEntity.toCategory(): Category {
-        val categoryImage = com.example.baseapp.data.model.CategoryImage(0, "", this.imageUrl) // ID ve name placeholder
+        val categoryImage = com.example.plantapp.data.model.CategoryImage(0, "", this.imageUrl) // ID ve name placeholder
         return Category(
             id = this.id,
             name = this.name,

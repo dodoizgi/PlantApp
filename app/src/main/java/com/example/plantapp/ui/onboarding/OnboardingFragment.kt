@@ -9,12 +9,11 @@ import android.text.style.StyleSpan
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
-import com.example.plantapp.databinding.FragmentOnboardingBinding
 import com.example.plantapp.R
-import dagger.hilt.android.AndroidEntryPoint
+import com.example.plantapp.databinding.FragmentOnboardingBinding
 import com.example.plantapp.ui.base.BaseFragment
+import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
 class OnboardingFragment : BaseFragment<FragmentOnboardingBinding>() {

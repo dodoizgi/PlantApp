@@ -1,4 +1,4 @@
-package com.example.baseapp.ui.home
+package com.example.plantapp.ui.home
 
 import android.content.Context
 import androidx.appcompat.app.AlertDialog

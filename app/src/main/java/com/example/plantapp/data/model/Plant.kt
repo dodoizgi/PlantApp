@@ -1,4 +1,4 @@
-package com.example.baseapp.data.model
+package com.example.plantapp.data.model
 
 data class Plant(
     val name: String,

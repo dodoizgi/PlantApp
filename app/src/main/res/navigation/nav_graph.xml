@@ -6,7 +6,7 @@
 
     <fragment
         android:id="@+id/onboardingFragment"
-        android:name="com.example.baseapp.ui.onboarding.OnboardingFragment"
+        android:name="com.example.plantapp.ui.onboarding.OnboardingFragment"
         android:label="OnboardingFragment">
         <action
             android:id="@+id/action_onboardingFragment_to_paywallFragment"
@@ -20,7 +20,7 @@
 
     <fragment
         android:id="@+id/paywallFragment"
-        android:name="com.example.baseapp.ui.paywall.PaywallFragment"
+        android:name="com.example.plantapp.ui.paywall.PaywallFragment"
         android:label="PaywallFragment">
         <action
             android:id="@+id/action_paywallFragment_to_homeFragment"
@@ -31,7 +31,7 @@
 
     <fragment
         android:id="@+id/homeFragment"
-        android:name="com.example.baseapp.ui.home.HomeFragment"
+        android:name="com.example.plantapp.ui.home.HomeFragment"
         android:label="HomeFragment">
         <action
             android:id="@+id/action_homeFragment_to_searchFragment"
@@ -49,22 +49,22 @@
 
     <fragment
         android:id="@+id/searchFragment"
-        android:name="com.example.baseapp.ui.search.SearchFragment"
+        android:name="com.example.plantapp.ui.search.SearchFragment"
         android:label="SearchFragment" />
 
     <fragment
         android:id="@+id/profileFragment"
-        android:name="com.example.baseapp.ui.profile.ProfileFragment"
+        android:name="com.example.plantapp.ui.profile.ProfileFragment"
         android:label="ProfileFragment" />
 
     <fragment
         android:id="@+id/myGardenFragment"
-        android:name="com.example.baseapp.ui.mygarden.MyGardenFragment"
+        android:name="com.example.plantapp.ui.mygarden.MyGardenFragment"
         android:label="MyGardenFragment" />
 
     <fragment
         android:id="@+id/diagnoseFragment"
-        android:name="com.example.baseapp.ui.diagnose.DiagnoseFragment"
+        android:name="com.example.plantapp.ui.diagnose.DiagnoseFragment"
         android:label="DiagnoseFragment" />
 
 </navigation> 
