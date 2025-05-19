@@ -4,6 +4,7 @@ import android.Manifest
 import android.content.pm.PackageManager
 import android.net.Uri
 import android.os.Bundle
+import android.view.View
 import android.view.WindowManager
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
@@ -12,6 +13,7 @@ import androidx.core.content.ContextCompat
 import androidx.core.content.FileProvider
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import com.example.plantapp.databinding.ActivityMainBinding
 import com.example.plantapp.ui.diagnose.DiagnoseFragment
@@ -52,7 +54,6 @@ class MainActivity : AppCompatActivity(), FragmentNavigationListener {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
         window.setFlags(
             WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS,
             WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS
@@ -60,8 +61,11 @@ class MainActivity : AppCompatActivity(), FragmentNavigationListener {
 
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        initView(savedInstanceState)
+    }
 
-        ViewCompat.setOnApplyWindowInsetsListener(binding.root) { view, insets ->
+    private fun initView(savedInstanceState: Bundle?) = with(binding) {
+        ViewCompat.setOnApplyWindowInsetsListener(root) { view, insets ->
             val navBarHeight = insets.getInsets(WindowInsetsCompat.Type.navigationBars()).bottom
             view.setPadding(0, 0, 0, navBarHeight)
             insets
@@ -72,9 +76,18 @@ class MainActivity : AppCompatActivity(), FragmentNavigationListener {
 
         if (isOnboardingCompleted) {
             loadFragment(HomeFragment())
+
+            if (!bottomLayout.isVisible) {
+                bottomLayout.visibility = View.VISIBLE
+                fabScan.visibility = View.VISIBLE
+            }
+
+            if (savedInstanceState == null) {
+                bottomNavigation.selectedItemId = R.id.nav_home
+            }
         }
 
-        binding.bottomNavigation.setOnItemSelectedListener { item ->
+        bottomNavigation.setOnItemSelectedListener { item ->
             when (item.itemId) {
                 R.id.nav_home -> loadFragment(HomeFragment())
                 R.id.nav_diagnose -> loadFragment(DiagnoseFragment())
@@ -84,16 +97,17 @@ class MainActivity : AppCompatActivity(), FragmentNavigationListener {
             true
         }
 
-        if (savedInstanceState == null) {
-            binding.bottomNavigation.selectedItemId = R.id.nav_home
-        }
-
-        binding.fabScan.setOnClickListener {
-            checkCameraPermissionAndStartCamera()
+        fabScan.apply {
+            setOnClickListener { checkCameraPermissionAndStartCamera() }
         }
     }
 
     override fun loadFragment(fragment: Fragment) {
+        if (!binding.bottomLayout.isVisible) {
+            binding.bottomLayout.visibility = View.VISIBLE
+            binding.fabScan.visibility = View.VISIBLE
+        }
+
         supportFragmentManager.beginTransaction()
             .replace(R.id.nav_host_fragment, fragment)
             .commit()

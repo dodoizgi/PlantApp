@@ -8,15 +8,17 @@ import android.view.View
 import android.view.View.GONE
 import android.view.View.VISIBLE
 import android.view.ViewGroup
-import androidx.fragment.app.Fragment
-import androidx.navigation.fragment.findNavController
+import com.example.plantapp.FragmentNavigationListener
 import com.example.plantapp.R
 import com.example.plantapp.databinding.FragmentPaywallBinding
-import dagger.hilt.android.AndroidEntryPoint
 import com.example.plantapp.ui.base.BaseFragment
+import com.example.plantapp.ui.home.HomeFragment
+import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
 class PaywallFragment : BaseFragment<FragmentPaywallBinding>() {
+    private lateinit var navigationListener: FragmentNavigationListener
+
 
     override fun inflateBinding(
         inflater: LayoutInflater,
@@ -27,12 +29,14 @@ class PaywallFragment : BaseFragment<FragmentPaywallBinding>() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        navigationListener = requireActivity() as FragmentNavigationListener
         initView()
         selectYearlyOption()
     }
 
     private fun initView() = with(binding) {
-        var sharedPreferences = requireContext().getSharedPreferences("app_preferences", Context.MODE_PRIVATE)
+        var sharedPreferences =
+            requireContext().getSharedPreferences("app_preferences", Context.MODE_PRIVATE)
         buttonTryFree.setOnClickListener {
             navigationCompleted(sharedPreferences)
         }
@@ -46,7 +50,7 @@ class PaywallFragment : BaseFragment<FragmentPaywallBinding>() {
 
     private fun navigationCompleted(sharedPreferences: SharedPreferences) {
         sharedPreferences.edit().putBoolean("is_onboarding_completed", true).apply()
-        findNavController().navigate(R.id.action_paywallFragment_to_homeFragment)
+        navigationListener.loadFragment(HomeFragment())
     }
 
     private fun selectMonthlyOption() = with(binding) {
