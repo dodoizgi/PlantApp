@@ -1,8 +1,8 @@
 package com.example.plantapp.di
 
 import com.example.plantapp.data.repository.Repository
-import com.example.plantapp.domain.usecase.GetCategoriesUseCase
-import com.example.plantapp.domain.usecase.GetQuestionsUseCase
+import com.example.plantapp.usecase.GetCategoriesUseCase
+import com.example.plantapp.usecase.GetQuestionsUseCase
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

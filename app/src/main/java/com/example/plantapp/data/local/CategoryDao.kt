@@ -9,14 +9,14 @@ import kotlinx.coroutines.flow.Flow
 @Dao
 interface CategoryDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    suspend fun insertCategories(categories: List<CategoryEntity>)
+    fun insertCategories(categories: List<CategoryEntity>)
 
     @Query("SELECT * FROM categories ORDER BY rank ASC")
-    fun getAllCategories(): Flow<List<CategoryEntity>>
+    fun getAllCategories(): List<CategoryEntity>
 
     @Query("SELECT * FROM categories WHERE title LIKE '%' || :query || '%' ORDER BY rank ASC")
     fun searchCategories(query: String): Flow<List<CategoryEntity>>
 
     @Query("DELETE FROM categories")
-    suspend fun deleteAllCategories(): Int
+    fun deleteAllCategories(): Int
 } 

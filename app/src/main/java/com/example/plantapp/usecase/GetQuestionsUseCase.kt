@@ -1,13 +1,14 @@
-package com.example.plantapp.domain.usecase
+package com.example.plantapp.usecase
 
 import com.example.plantapp.data.model.Question
 import com.example.plantapp.data.repository.Repository
+import kotlinx.coroutines.flow.Flow
 import javax.inject.Inject
 
 class GetQuestionsUseCase @Inject constructor(
     private val repository: Repository
 ) {
-    suspend operator fun invoke(): List<Question> {
+    fun getQuestions(): Flow<List<Question>> {
         return repository.getQuestions()
     }
 } 
