@@ -60,18 +60,21 @@ git clone https://github.com/dodoizgi/plantapp.git
 
 ```
 app/
-├── data/
-│   ├── api/
-│   ├── repository/
-│   └── model/
-├── di/
-├── ui/
-│   ├── base/
-│   ├── home/
-│   ├── diagnose/
-│   ├── mygarden/
-│   └── profile/
-└── utils/
+├── data/                  # Veri katmanı
+│   ├── api/              # API servisleri ve ağ istekleri
+│   ├── repository/       # Repository implementasyonları
+│   └── model/           # Veri modelleri
+├── domain/              # Domain katmanı
+│   ├── model/          # Domain modelleri
+│   ├── repository/     # Repository interfaces
+│   └── usecase/        # Use case'ler
+├── presentation/        # UI katmanı
+│   ├── base/           # Base sınıflar
+│   ├── home/           # Ana ekran
+│   ├── diagnose/       # Teşhis ekranı
+│   ├── mygarden/       # Bahçe yönetimi
+│   └── profile/        # Profil ekranı
+├── di/                 # Dependency Injection modülleri
 ```
 
 ## 🎨 Tema ve Stil
