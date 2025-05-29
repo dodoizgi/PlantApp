@@ -4,6 +4,7 @@ import android.content.Context
 import androidx.room.Room
 import com.example.plantapp.data.local.AppDatabase
 import com.example.plantapp.data.local.CategoryDao
+import com.example.plantapp.data.local.QuestionDao
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -28,5 +29,10 @@ object DatabaseModule {
     @Provides
     fun provideCategoryDao(db: AppDatabase): CategoryDao {
         return db.categoryDao()
+    }
+
+    @Provides
+    fun provideQuestionDao(db: AppDatabase): QuestionDao {
+        return db.questionDao()
     }
 }

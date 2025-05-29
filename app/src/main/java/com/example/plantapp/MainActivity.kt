@@ -16,10 +16,10 @@ import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import com.example.plantapp.databinding.ActivityMainBinding
-import com.example.plantapp.ui.diagnose.DiagnoseFragment
-import com.example.plantapp.ui.home.HomeFragment
-import com.example.plantapp.ui.mygarden.MyGardenFragment
-import com.example.plantapp.ui.profile.ProfileFragment
+import com.example.plantapp.presentation.diagnose.DiagnoseFragment
+import com.example.plantapp.presentation.home.HomeFragment
+import com.example.plantapp.presentation.mygarden.MyGardenFragment
+import com.example.plantapp.presentation.profile.ProfileFragment
 import dagger.hilt.android.AndroidEntryPoint
 import java.io.File
 import java.io.IOException

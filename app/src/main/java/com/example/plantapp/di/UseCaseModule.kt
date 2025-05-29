@@ -1,8 +1,8 @@
 package com.example.plantapp.di
 
-import com.example.plantapp.data.repository.Repository
-import com.example.plantapp.usecase.GetCategoriesUseCase
-import com.example.plantapp.usecase.GetQuestionsUseCase
+import com.example.plantapp.data.repository.RepositoryImpl
+import com.example.plantapp.domain.usecase.GetHomeCategoriesUseCase
+import com.example.plantapp.domain.usecase.GetHomeQuestionsUseCase
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -15,13 +15,13 @@ object UseCaseModule {
 
     @Provides
     @Singleton
-    fun provideGetCategoriesUseCase(repository: Repository): GetCategoriesUseCase {
-        return GetCategoriesUseCase(repository)
+    fun provideGetCategoriesUseCase(repositoryImpl: RepositoryImpl): GetHomeCategoriesUseCase {
+        return GetHomeCategoriesUseCase(repositoryImpl)
     }
 
     @Provides
     @Singleton
-    fun provideGetQuestionsUseCase(repository: Repository): GetQuestionsUseCase {
-        return GetQuestionsUseCase(repository)
+    fun provideGetQuestionsUseCase(repositoryImpl: RepositoryImpl): GetHomeQuestionsUseCase {
+        return GetHomeQuestionsUseCase(repositoryImpl)
     }
 } 

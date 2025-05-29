@@ -1,6 +1,11 @@
 package com.example.plantapp.di
 
-import com.example.plantapp.data.api.ApiService
+import com.example.plantapp.data.local.LocalDataSource
+import com.example.plantapp.data.remote.RemoteDataSource
+import com.example.plantapp.data.remote.api.ApiService
+import com.example.plantapp.data.repository.RepositoryImpl
+import com.example.plantapp.domain.repository.Repository
+import dagger.Binds
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -40,5 +45,11 @@ object AppModule {
     @Singleton
     fun provideApiService(retrofit: Retrofit): ApiService {
         return retrofit.create(ApiService::class.java)
+    }
+
+    @Provides
+    @Singleton
+    fun provideRepositoryImpl(remoteDataSource: RemoteDataSource, localDataSource: LocalDataSource): Repository  {
+        return RepositoryImpl(remoteDataSource, localDataSource)
     }
 } 
